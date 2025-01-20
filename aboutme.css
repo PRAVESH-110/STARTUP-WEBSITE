@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Futur', sans-serif;
+}
+
+.moreaboutme {
+    position: absolute;
+    top:90%; /* Position 10% from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffd700; /* Green background */
+    color: black; /* White text */
+    padding: 10px 20px; /* Padding */
+    border-color: black; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    animation: fadeIn 1s; /* Animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-section {
+    position: absolute; /* Position it absolutely */
+    bottom: 20px; /* Adjust as needed to position above the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 10; /* Ensure it appears above the image */
+    text-align: center; /* Center the text */
+}
+
+img {
+    width: 100%; /* Make the image take the full width of the screen */
+    height: 100%; /* Maintain the aspect ratio */
+    display:; /* Remove any extra space below the image */
+    opacity: 0.85; /* Adjust opacity */
+    filter: brightness(0.8); /* Darken the image */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 25%; /* Adjusted to move the overlay upwards */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Change this to a color that is visible against the image */
+    text-align: center;
+    z-index: 1; /* Ensure the text is above the image */
+}
+
+.go-back-button {
+    position: relative;
+    align-content: center;
+    padding: 10px 20px;
+    bottom: 15%; /* Adjusted to move the button further down */
+    border: 2px solid black; /* Black border */
+    border-radius: 20px; /* Round radius */
+    background-color: rgb(255, 255, 255); /* Button background color */
+    color: rgb(0, 0, 0); /* Text color */
+    cursor: pointer;
+    object-fit: cover;
+    font-size: 16px;
+}
+
+/* Typing animation for h1 */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+h1 {
+    font-size: 7em; /* Adjust this value to double the current size */
+    margin-bottom: 10px; /* Adjusted to reduce space between h1 and h2 */
+    overflow: hidden; /* Ensures the text is hidden until animated */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-right: 0.15em solid orange; /* Cursor effect */
+    animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Blink caret animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+/* Slide-in animation for h2 */
+@keyframes slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+h2 {
+    animation: slide-in 1s forwards; /* Slide in from the right */
+    text-align: left; /* Align text to the left */
+}
+
+/* New slide-in animation for Contact section */
+@keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.contact-section {
+    animation: slide-in 3s forwards; /* Slide in from the right */
+    position: absolute; /* Positioning it absolutely */
+    right: 0; /* Align to the right */
+    top: 20%; /* Adjust top position as needed */
+}
+
+.social-logo {
+    width: 30px; /* Adjust size as needed */
+}
